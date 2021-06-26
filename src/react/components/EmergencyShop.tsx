@@ -33,7 +33,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Terminator Spirit"
 					itemPrice={50}
 					buyItem={props.buyItem}
-					upgradeResult={0.2}
+					upgradeResult={0.6}
 				/>
 				<ShopItem
 					imgSrc={<Heart size={42} />}
@@ -41,7 +41,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Live Waster"
 					itemPrice={400}
 					buyItem={props.buyItem}
-					upgradeResult={0.4}
+					upgradeResult={5}
 				/>
 				<ShopItem
 					imgSrc={<Planet size={42} />}
@@ -49,7 +49,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Planet Destroyer"
 					itemPrice={1000}
 					buyItem={props.buyItem}
-					upgradeResult={0.8}
+					upgradeResult={12}
 				/>
 				<ShopItem
 					imgSrc={<CirclePlusFill size={42} />}
@@ -57,7 +57,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Bigger Button"
 					itemPrice={2000}
 					buyItem={props.buyItem}
-					upgradeResult={1.5}
+					upgradeResult={25}
 				/>
 				<ShopItem
 					imgSrc={<Utensils size={42} />}
@@ -65,7 +65,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Soul eater"
 					itemPrice={5000}
 					buyItem={props.buyItem}
-					upgradeResult={3}
+					upgradeResult={60}
 				/>
 				<ShopItem
 					imgSrc={<LightBulb size={42} />}
@@ -73,7 +73,7 @@ const EmergencyShop = (props: Props) => {
 					itemText="Last Light"
 					itemPrice={10000}
 					buyItem={props.buyItem}
-					upgradeResult={5}
+					upgradeResult={130}
 				/>
 			</div>
 		</div>

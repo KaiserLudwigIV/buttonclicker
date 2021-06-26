@@ -1,24 +1,23 @@
 import React from "react";
-import logo from "../../imgs/button.svg";
+import { useState } from "react";
+import releasedbutton from "../../imgs/releasedbutton.svg";
+import pressedbutton from "../../imgs/pressedbutton.svg";
 
 interface Props {
 	mainButtonClick: () => void;
 }
 
 const MainButton = (props: Props) => {
+	const [button, setbutton] = useState(false);
 	return (
 		<button
 			id="mainButton"
 			onClick={props.mainButtonClick}
-			onMouseDown={(e: any) =>
-				e.currentTarget.firstChild.classList.add("little")
-			}
-			onMouseUp={(e: any) =>
-				e.currentTarget.firstChild.classList.remove("little")
-			}
+			onMouseDown={(e: any) => setbutton(true)}
+			onMouseUp={(e: any) => setbutton(false)}
 		>
 			<img
-				src={logo}
+				src={button == true ? pressedbutton : releasedbutton}
 				style={{ width: "100%", height: "100%" }}
 				alt="Button"
 			/>

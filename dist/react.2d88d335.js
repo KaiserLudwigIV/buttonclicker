@@ -29566,8 +29566,10 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"imgs/button.svg":[function(require,module,exports) {
-module.exports = "/button.db89a632.svg";
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"imgs/releasedbutton.svg":[function(require,module,exports) {
+module.exports = "/releasedbutton.a9e7fa97.svg";
+},{}],"imgs/pressedbutton.svg":[function(require,module,exports) {
+module.exports = "/pressedbutton.8a203e4b.svg";
 },{}],"react/components/MainButton.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -29576,24 +29578,34 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.MainButton = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _button = _interopRequireDefault(require("../../imgs/button.svg"));
+var _releasedbutton = _interopRequireDefault(require("../../imgs/releasedbutton.svg"));
+
+var _pressedbutton = _interopRequireDefault(require("../../imgs/pressedbutton.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var MainButton = function MainButton(props) {
+  var _a = (0, _react.useState)(false),
+      button = _a[0],
+      setbutton = _a[1];
+
   return _react.default.createElement("button", {
     id: "mainButton",
     onClick: props.mainButtonClick,
     onMouseDown: function onMouseDown(e) {
-      return e.currentTarget.firstChild.classList.add("little");
+      return setbutton(true);
     },
     onMouseUp: function onMouseUp(e) {
-      return e.currentTarget.firstChild.classList.remove("little");
+      return setbutton(false);
     }
   }, _react.default.createElement("img", {
-    src: _button.default,
+    src: button == true ? _pressedbutton.default : _releasedbutton.default,
     style: {
       width: "100%",
       height: "100%"
@@ -29603,7 +29615,7 @@ var MainButton = function MainButton(props) {
 };
 
 exports.MainButton = MainButton;
-},{"react":"../node_modules/react/index.js","../../imgs/button.svg":"imgs/button.svg"}],"react/components/TextLine.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../imgs/releasedbutton.svg":"imgs/releasedbutton.svg","../../imgs/pressedbutton.svg":"imgs/pressedbutton.svg"}],"react/components/TextLine.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43496,7 +43508,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Terminator Spirit",
     itemPrice: 50,
     buyItem: props.buyItem,
-    upgradeResult: 0.2
+    upgradeResult: 0.6
   }), _react.default.createElement(_ShopItem.ShopItem, {
     imgSrc: _react.default.createElement(_akarIcons.Heart, {
       size: 42
@@ -43505,7 +43517,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Live Waster",
     itemPrice: 400,
     buyItem: props.buyItem,
-    upgradeResult: 0.4
+    upgradeResult: 5
   }), _react.default.createElement(_ShopItem.ShopItem, {
     imgSrc: _react.default.createElement(_akarIcons.Planet, {
       size: 42
@@ -43514,7 +43526,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Planet Destroyer",
     itemPrice: 1000,
     buyItem: props.buyItem,
-    upgradeResult: 0.8
+    upgradeResult: 12
   }), _react.default.createElement(_ShopItem.ShopItem, {
     imgSrc: _react.default.createElement(_akarIcons.CirclePlusFill, {
       size: 42
@@ -43523,7 +43535,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Bigger Button",
     itemPrice: 2000,
     buyItem: props.buyItem,
-    upgradeResult: 1.5
+    upgradeResult: 25
   }), _react.default.createElement(_ShopItem.ShopItem, {
     imgSrc: _react.default.createElement(_akarIcons.Utensils, {
       size: 42
@@ -43532,7 +43544,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Soul eater",
     itemPrice: 5000,
     buyItem: props.buyItem,
-    upgradeResult: 3
+    upgradeResult: 60
   }), _react.default.createElement(_ShopItem.ShopItem, {
     imgSrc: _react.default.createElement(_akarIcons.LightBulb, {
       size: 42
@@ -43541,7 +43553,7 @@ var EmergencyShop = function EmergencyShop(props) {
     itemText: "Last Light",
     itemPrice: 10000,
     buyItem: props.buyItem,
-    upgradeResult: 5
+    upgradeResult: 130
   })));
 };
 
@@ -43901,7 +43913,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56189" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62686" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

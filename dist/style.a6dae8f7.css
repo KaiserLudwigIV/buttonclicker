@@ -19,8 +19,8 @@ body {
   transform: translate(-50%, -50%);
   background-color: transparent;
   border: none;
-  width: 15rem;
-  height: 15rem;
+  width: 18rem;
+  height: 18rem;
 }
 #mainButton > img {
   pointer-events: none;
@@ -91,7 +91,7 @@ body {
   right: 1rem;
   top: 1rem;
   color: white;
-  background-color: black;
+  background-color: #000000;
   padding: 0.5rem;
   width: 3.5rem;
   height: 3.5rem;
