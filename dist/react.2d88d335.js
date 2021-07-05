@@ -29595,6 +29595,10 @@ var MainButton = function MainButton(props) {
       button = _a[0],
       setbutton = _a[1];
 
+  (0, _react.useEffect)(function () {
+    var img = new Image();
+    img.src = _pressedbutton.default;
+  });
   return _react.default.createElement("button", {
     id: "mainButton",
     onClick: props.mainButtonClick,
@@ -29605,7 +29609,7 @@ var MainButton = function MainButton(props) {
       return setbutton(false);
     }
   }, _react.default.createElement("img", {
-    src: button == true ? _pressedbutton.default : _releasedbutton.default,
+    src: button === true ? _pressedbutton.default : _releasedbutton.default,
     style: {
       width: "100%",
       height: "100%"
@@ -43913,7 +43917,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62686" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65367" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
