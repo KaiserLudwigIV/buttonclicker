@@ -112,6 +112,10 @@ body {
 	transform: translateY(-50%);
 	overflow-y: scroll;
 	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 	& > h1 {
 		color: white;
 		text-align: center;

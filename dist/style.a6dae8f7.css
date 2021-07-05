@@ -113,6 +113,10 @@ body {
   transform: translateY(-50%);
   overflow-y: scroll;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#emergencyShopContainer::-webkit-scrollbar {
+  display: none;
 }
 #emergencyShopContainer > h1 {
   color: white;
@@ -142,7 +146,11 @@ body {
   transform: translateY(-50%);
   overflow-y: scroll;
   scrollbar-width: none;
+  -ms-overflow-style: none;
   right: 0;
+}
+#offlineShopContainer::-webkit-scrollbar {
+  display: none;
 }
 #offlineShopContainer > h1 {
   color: white;
